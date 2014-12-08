@@ -238,6 +238,8 @@ Edif::SDK::SDK(mv * mV, json_value &_json) : json (_json)
 				free(IconData);
         }
     }
+#else
+    Icon = NULL;
 #endif // RUN_ONLY
 
     const json_value &Actions = json["Actions"];
